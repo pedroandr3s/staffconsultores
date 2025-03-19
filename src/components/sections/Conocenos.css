@@ -1,0 +1,296 @@
+.conocenos-section {
+  padding: 2rem 1.5rem;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.conocenos-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.conocenos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.conocenos-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.conocenos-titulo {
+  font-size: 1.8rem;
+  color: #3d5a80;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 1rem;
+}
+
+.conocenos-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4ecdc4, #ff8000);
+  border-radius: 2px;
+  transition: width 0.8s ease-in-out;
+}
+
+.animate-in .conocenos-titulo::after {
+  width: 60px;
+}
+
+.conocenos-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.conocenos-col {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.conocenos-col:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.conocenos-subtitulo {
+  font-size: 1.2rem;
+  color: #3d5a80;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+
+.conocenos-subtitulo::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #4ecdc4, #ff8000);
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+  border-radius: 2px;
+}
+
+.animate-in .conocenos-subtitulo::after {
+  transform: scaleX(1);
+}
+
+.dedicacion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dedicacion-texto {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+  font-style: italic;
+  position: relative;
+  padding-left: 12px;
+  border-left: 2px solid #4ecdc4;
+  margin-left: 5px;
+}
+
+.director-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transition-delay: 0.3s;
+}
+
+.animate-in .director-info {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.director-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #e9ecef;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+.director-avatar:hover::before {
+  transform: scale(1.1);
+}
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes the image fill the container while maintaining aspect ratio */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.director-avatar:hover .avatar-image {
+  transform: scale(1.1);
+}
+
+
+.director-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.director-nombre {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #3d5a80;
+}
+
+.director-cargo {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 2px 0 0;
+}
+
+.principios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.principio-card {
+  background: white;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.animate-in .principio-card:nth-child(1) {
+  animation: fadeInUp 0.5s ease-out 0.2s forwards;
+}
+
+.animate-in .principio-card:nth-child(2) {
+  animation: fadeInUp 0.5s ease-out 0.4s forwards;
+}
+
+.animate-in .principio-card:nth-child(3) {
+  animation: fadeInUp 0.5s ease-out 0.6s forwards;
+}
+
+.principio-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.principio-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.principio-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #4ecdc4, #ff8000);
+  color: white;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.principio-card:hover .principio-icono {
+  transform: rotate(360deg);
+}
+
+.principio-titulo {
+  font-size: 1rem;
+  margin: 0;
+  color: #3d5a80;
+  font-weight: 600;
+}
+
+.principio-texto {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media queries para responsividad */
+@media (max-width: 992px) {
+  .conocenos-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .conocenos-titulo {
+    font-size: 1.5rem;
+  }
+  
+  .conocenos-subtitulo {
+    font-size: 1.1rem;
+  }
+}
+
+/* Efecto de rebote suave para los cards */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.principio-card:hover {
+  animation: float 2s ease-in-out infinite;
+}

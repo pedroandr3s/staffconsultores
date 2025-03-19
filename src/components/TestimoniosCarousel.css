@@ -1,0 +1,292 @@
+.testimonios-section {
+  padding: 40px 0; /* Reducido de 80px a 40px */
+  background: linear-gradient(90deg, #ff8000, #4ecdc4);
+  width: 100%;
+  position: relative;
+}
+
+/* Opcional: Textura sutil */
+.testimonios-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.testimonios-container {
+  max-width: 1000px; /* Reducido de 1200px a 1000px */
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonios-title {
+  text-align: center;
+  margin-bottom: 30px; /* Reducido de 50px a 30px */
+  font-size: 32px; /* Reducido de 36px a 32px */
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px; /* Reducido de 300px a 220px */
+}
+
+.carousel-content {
+  width: 90%;
+  position: relative;
+  min-height: 180px; /* Reducido de 250px a 180px */
+}
+
+.testimonio-card {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.testimonio-card.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.testimonio-inner {
+  background-color: white;
+  border-radius: 10px; /* Reducido de 12px a 10px */
+  padding: 25px 20px; /* Reducido de 35px 30px a 25px 20px */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  max-width: 700px; /* Reducido de 800px a 700px */
+}
+
+.testimonio-quote-marks {
+  color: #ff8000;
+  margin-bottom: 12px; /* Reducido de 15px a 12px */
+  display: flex;
+  justify-content: flex-start;
+}
+
+.testimonio-quote-marks svg {
+  width: 32px; /* Tamaño reducido para el icono de comillas */
+  height: 28px;
+}
+
+.testimonio-texto {
+  font-size: 16px; /* Reducido de 17px a 16px */
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px; /* Reducido de 25px a 20px */
+  text-align: left;
+}
+
+.testimonio-author {
+  display: flex;
+  align-items: center;
+  margin-top: 15px; /* Reducido de 20px a 15px */
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 15px; /* Reducido de 20px a 15px */
+}
+
+.author-avatar {
+  width: 60px; /* Reducido de 80px a 60px */
+  height: 60px; /* Reducido de 80px a 60px */
+  min-width: 60px; /* Reducido de 80px a 60px */
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 15px; /* Reducido de 20px a 15px */
+  background-color: #f0f0f0;
+  border: 3px solid #4ecdc4;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.author-details {
+  flex: 1;
+}
+
+.testimonio-nombre {
+  font-size: 16px; /* Reducido de 18px a 16px */
+  font-weight: 600;
+  margin: 0 0 4px; /* Reducido de 6px a 4px */
+  color: #333;
+}
+
+.testimonio-cargo {
+  font-size: 13px; /* Reducido de 14px a 13px */
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.carousel-button {
+  background: white;
+  border: none;
+  width: 36px; /* Reducido de 44px a 36px */
+  height: 36px; /* Reducido de 44px a 36px */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-button.prev {
+  left: 0;
+}
+
+.carousel-button.next {
+  right: 0;
+}
+
+.arrow-icon {
+  font-size: 18px; /* Reducido de 20px a 18px */
+  color: #ff8000;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Reducido de 30px a 20px */
+  gap: 8px; /* Reducido de 10px a 8px */
+}
+
+.dot {
+  width: 10px; /* Reducido de 12px a 10px */
+  height: 10px; /* Reducido de 12px a 10px */
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.dot.active {
+  background-color: white;
+  transform: scale(1.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .testimonios-section {
+    padding: 40px 0;
+  }
+
+  .testimonios-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  
+  .carousel-container {
+    padding: 0 20px;
+    min-height: 350px; /* Ajustado para móviles */
+  }
+  
+  .testimonio-inner {
+    padding: 20px 15px;
+  }
+  
+  .testimonio-author {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .author-avatar {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  
+  .testimonio-texto {
+    font-size: 15px;
+  }
+  
+  .carousel-button {
+    width: 34px;
+    height: 34px;
+    top: auto;
+    bottom: -50px;
+    transform: none;
+  }
+  
+  .carousel-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .carousel-button.prev {
+    left: calc(50% - 45px);
+  }
+  
+  .carousel-button.next {
+    right: calc(50% - 45px);
+  }
+  
+  .carousel-dots {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonios-section {
+    padding: 35px 0;
+  }
+
+  .testimonio-cargo {
+    font-size: 12px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .carousel-content {
+    width: 100%;
+  }
+  
+  .carousel-container {
+    min-height: 380px;
+  }
+
+  .testimonio-inner {
+    padding: 18px 12px;
+  }
+
+  .testimonio-texto {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}

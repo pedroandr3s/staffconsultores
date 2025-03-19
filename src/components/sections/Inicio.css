@@ -1,0 +1,77 @@
+.inicio-section {
+    /* Configuración para ocupar todo el tamaño de la pantalla */
+    min-height: 100vh;
+    width: 100%;
+    
+    /* Configuración de la imagen de fondo */
+    background-image: url('./bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Flexbox para centrar el contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inicio-image-container {
+    text-align: center;
+  }
+  
+  .inicio-image {
+    max-width: 80%;
+    height: auto;
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .inicio-image {
+      max-width: 90%;
+    }
+  }/* Añade esto al inicio de tu App.css */
+html {
+    scroll-padding-top: 80px; /* Ajusta este valor según la altura de tu header */
+    scroll-behavior: smooth;
+  }
+  .inicio-section {
+    /* Configuración para ocupar todo el tamaño de la pantalla */
+    min-height: calc(100vh - 80px); /* Restar la altura del header */
+    width: 100%;
+    
+    /* Configuración de la imagen de fondo */
+    background-image: url('./bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Flexbox para centrar el contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Ajuste importante para el posicionamiento */
+    margin-top: 80px; /* Debe coincidir con la altura del header */
+    box-sizing: border-box;
+  }
+  
+  .inicio-image-container {
+    text-align: center;
+  }
+  
+  .inicio-image {
+    max-width: 80%;
+    height: auto;
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .inicio-image {
+      max-width: 90%;
+    }
+    
+    .inicio-section {
+      min-height: calc(100vh - 60px); /* Ajustar si el header cambia de tamaño en móviles */
+      margin-top: 60px;
+    }
+  }
